@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voiture Showroom | Toyota Collection</title>
+    <title>Voiture Showroom | BYD Collection</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
@@ -22,104 +22,24 @@
         nav ul li { margin: 0 20px; position: relative; }
         nav ul li a { text-decoration: none; color: #cccccc; font-size: 14px; font-weight: 600; text-transform: uppercase; }
         nav ul li a:hover { color: #ff2a2a; }
-
-        .dropdown-container:hover .arrow {
-            transform: rotate(180deg);
-            color: #ff2a2a;
-        }
-
+        .dropdown-container:hover .arrow { transform: rotate(180deg); color: #ff2a2a; }
         .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(15px);
-            background-color: rgba(15, 15, 15, 0.98);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            width: 940px;
-            border-radius: 4px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-            z-index: 1100;
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(15px);
+            background-color: rgba(15, 15, 15, 0.98); border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); padding: 30px; width: 940px; border-radius: 4px;
+            opacity: 0; visibility: hidden; transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); z-index: 1100;
         }
-
-        .dropdown-container:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .dropdown-grid {
-            display: flex;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .dropdown-column {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .dropdown-column h3 {
-            font-size: 12px;
-            color: #666666;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            padding-bottom: 5px;
-            font-weight: 700;
-        }
-
-        .dropdown-column .sub-region {
-            margin-top: 20px;
-        }
-
-        .dropdown-column a {
-            color: #ffffff;
-            font-size: 13px;
-            text-transform: none;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            padding: 8px 0;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .dropdown-column a img {
-            width: 18px;
-            height: 18px;
-            object-fit: contain;
-            filter: brightness(0) invert(1);
-            opacity: 0.6;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-column a:hover {
-            color: #ff2a2a;
-            transform: translateX(4px);
-        }
-
-        .dropdown-column a:hover img {
-            opacity: 1;
-            filter: none;
-        }
-
-        .wide-column {
-            flex: 1.5;
-        }
-
-        .nested-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0 15px;
-        }
+        .dropdown-container:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .dropdown-grid { display: flex; justify-content: space-between; gap: 25px; }
+        .dropdown-column { flex: 1; display: flex; flex-direction: column; }
+        .dropdown-column h3 { font-size: 12px; color: #666666; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.03); padding-bottom: 5px; font-weight: 700; }
+        .dropdown-column .sub-region { margin-top: 20px; }
+        .dropdown-column a { color: #ffffff; font-size: 13px; text-transform: none; font-weight: 500; letter-spacing: 0.5px; padding: 8px 0; transition: all 0.2s ease; display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .dropdown-column a img { width: 18px; height: 18px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.6; transition: all 0.2s ease; }
+        .dropdown-column a:hover { color: #ff2a2a; transform: translateX(4px); }
+        .dropdown-column a:hover img { opacity: 1; filter: none; }
+        .wide-column { flex: 1.5; }
+        .nested-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 15px; }
 
         .shop-container { margin-top: 80px; padding: 60px 8% 80px; }
         .shop-header { margin-bottom: 40px; }
@@ -128,17 +48,10 @@
 
         .car-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
         .car-card-link { text-decoration: none; color: inherit; display: block; }
-        
-        .car-card {
-            background-color: #121212; border-radius: 12px; overflow: hidden;
-            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
-            display: flex; flex-direction: column; height: 100%;
-        }
+        .car-card { background-color: #121212; border-radius: 12px; overflow: hidden; transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease; display: flex; flex-direction: column; height: 100%; }
         .car-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); }
-
         .image-container { position: relative; width: 100%; height: 210px; background-color: #1a1a1a; display: flex; justify-content: center; align-items: center; padding: 15px; }
         .car-img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        
         .car-details { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
         .brand-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
         .brand-text { font-size: 11px; font-weight: 700; color: #666666; letter-spacing: 1px; }
@@ -212,7 +125,7 @@
                     </div>
                 </li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="toyota.html">Shop</a></li>
+                <li><a href="byd.html">Shop</a></li>
                 <li><a href="../about.html">About</a></li>
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
@@ -221,93 +134,93 @@
 
     <main class="shop-container">
         <div class="shop-header">
-            <h2 class="results-title">Toyota Collection</h2>
+            <h2 class="results-title">BYD Collection</h2>
             <p class="results-count">5 Models Available Found Locally</p>
         </div>
 
         <div class="car-grid">
-            
-            <a href="vios.html" class="car-card-link">
+
+            <a href="sealion-6-dmi.html" class="car-card-link">
                 <div class="car-card">
                     <div class="image-container">
-                        <img src="images/vios.png" alt="Toyota Vios" class="car-img">
+                        <img src="images/sealion-6-dmi.png" alt="BYD Sealion 6 DM-i" class="car-img">
                     </div>
                     <div class="car-details">
                         <div class="brand-row">
-                            <span class="brand-text">TOYOTA</span>
+                            <span class="brand-text">BYD</span>
+                            <span class="spec-badge">SUV / Crossover</span>
+                        </div>
+                        <h3 class="car-name">Sealion 6 DM-i (2025)</h3>
+                        <p class="car-mileage">BYD was founded in China and has rapidly climbed to become the top Electric Vehicle brand in the Philippines.</p>
+                        <div class="price-row"><span class="price-text">₱1,548,000</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="atto-3.html" class="car-card-link">
+                <div class="car-card">
+                    <div class="image-container">
+                        <img src="images/atto-3.png" alt="BYD Atto 3" class="car-img">
+                    </div>
+                    <div class="car-details">
+                        <div class="brand-row">
+                            <span class="brand-text">BYD</span>
+                            <span class="spec-badge">SUV / Crossover</span>
+                        </div>
+                        <h3 class="car-name">Atto 3 (2025)</h3>
+                        <p class="car-mileage">A globally acclaimed all-electric crossover built on BYD's advanced e-Platform 3.0.</p>
+                        <div class="price-row"><span class="price-text">₱1,598,000 - ₱1,798,000</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="seal-5-dmi.html" class="car-card-link">
+                <div class="car-card">
+                    <div class="image-container">
+                        <img src="images/seal-5-dmi.png" alt="BYD Seal 5 DM-i" class="car-img">
+                    </div>
+                    <div class="car-details">
+                        <div class="brand-row">
+                            <span class="brand-text">BYD</span>
                             <span class="spec-badge">Sedan</span>
                         </div>
-                        <h3 class="car-name">Vios (2025)</h3>
-                        <p class="car-mileage">Toyota was founded in Japan and is the most dominant automotive brand in the Philippines.</p>
-                        <div class="price-row"><span class="price-text">₱732,000 - ₱1,039,000</span></div>
+                        <h3 class="car-name">Seal 5 DM-i (2025)</h3>
+                        <p class="car-mileage">A hyper-efficient plug-in hybrid sedan offering remarkable fuel savings for everyday commuting.</p>
+                        <div class="price-row"><span class="price-text">₱1,198,000</span></div>
                     </div>
                 </div>
             </a>
 
-            <a href="hilux.html" class="car-card-link">
+            <a href="dolphin.html" class="car-card-link">
                 <div class="car-card">
                     <div class="image-container">
-                        <img src="images/hilux.png" alt="Toyota Hilux" class="car-img">
+                        <img src="images/dolphin.png" alt="BYD Dolphin" class="car-img">
                     </div>
                     <div class="car-details">
                         <div class="brand-row">
-                            <span class="brand-text">TOYOTA</span>
-                            <span class="spec-badge">Pickup Truck</span>
+                            <span class="brand-text">BYD</span>
+                            <span class="spec-badge">Hatchback</span>
                         </div>
-                        <h3 class="car-name">Hilux (2026)</h3>
-                        <p class="car-mileage">The Toyota Hilux is widely recognized globally for its immense durability and off-road capability.</p>
-                        <div class="price-row"><span class="price-text">₱885,000 - ₱2,106,000</span></div>
+                        <h3 class="car-name">Dolphin (2025)</h3>
+                        <p class="car-mileage">An agile, ocean-inspired hatchback tailored perfectly for navigating tight city streets.</p>
+                        <div class="price-row"><span class="price-text">₱1,398,000</span></div>
                     </div>
                 </div>
             </a>
 
-            <a href="fortuner.html" class="car-card-link">
+            <a href="seagull.html" class="car-card-link">
                 <div class="car-card">
                     <div class="image-container">
-                        <img src="images/fortuner.png" alt="Toyota Fortuner" class="car-img">
+                        <img src="images/seagull.png" alt="BYD Seagull" class="car-img">
                     </div>
                     <div class="car-details">
                         <div class="brand-row">
-                            <span class="brand-text">TOYOTA</span>
-                            <span class="spec-badge">SUV</span>
+                            <span class="brand-text">BYD</span>
+                            <span class="spec-badge">Hatchback</span>
                         </div>
-                        <h3 class="car-name">Fortuner (2025)</h3>
-                        <p class="car-mileage">One of the most popular mid-size family SUVs in the Philippine market.</p>
-                        <div class="price-row"><span class="price-text">₱1,769,000 - ₱2,650,000</span></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="zenix.html" class="car-card-link">
-                <div class="car-card">
-                    <div class="image-container">
-                        <img src="images/zenix.png" alt="Toyota Zenix" class="car-img">
-                    </div>
-                    <div class="car-details">
-                        <div class="brand-row">
-                            <span class="brand-text">TOYOTA</span>
-                            <span class="spec-badge">MPV</span>
-                        </div>
-                        <h3 class="car-name">Zenix Innova (2025)</h3>
-                        <p class="car-mileage">A modern evolution of the classic Filipino family MPV, now incorporating hybrid technology.</p>
-                        <div class="price-row"><span class="price-text">₱1,670,000 - ₱1,953,000</span></div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="supra.html" class="car-card-link">
-                <div class="car-card">
-                    <div class="image-container">
-                        <img src="images/supra.png" alt="Toyota GR Supra" class="car-img">
-                    </div>
-                    <div class="car-details">
-                        <div class="brand-row">
-                            <span class="brand-text">TOYOTA</span>
-                            <span class="spec-badge">Sports Car</span>
-                        </div>
-                        <h3 class="car-name">GR Supra (2025)</h3>
-                        <p class="car-mileage">Toyota's flagship sports car, co-developed with BMW to revive a legendary nameplate.</p>
-                        <div class="price-row"><span class="price-text">₱5,396,000</span></div>
+                        <h3 class="car-name">Seagull (2025)</h3>
+                        <p class="car-mileage">BYD’s most affordable entry-level electric vehicle aimed at bringing green mobility to the masses.</p>
+                        <div class="price-row"><span class="price-text">₱898,000</span></div>
                     </div>
                 </div>
             </a>

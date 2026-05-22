@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voiture Showroom | About Us</title>
-    <link rel="stylesheet" href="about.css">
+    <title>Voiture Showroom | Contact Channels</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
@@ -67,80 +67,84 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="toyota.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="contact-container">
         
-        <section class="about-hero">
-            <span class="hero-subtitle">The Ultimate Automotive Showroom</span>
-            <h1 class="hero-title">Redefining the digital showroom interface</h1>
-        </section>
+        <div class="contact-header">
+            <span class="contact-subtitle">Client Concierge</span>
+            <h2 class="contact-title">Establish Connection</h2>
+        </div>
 
-        <section class="story-container">
-            <h4 class="story-heading">Our Blueprint</h4>
-            <p class="story-body">
-                Engineered as a core technical demonstration project for <span class="story-highlight">ITEC50 (Computer Programming 1)</span>, 
-                <span class="story-highlight">Voiture</span> bridges high-performance user interface blueprints with minimalist architecture layout. Inspired by world-renowned elite global car brokers, this platform serves as a modern visual hub showcasing computational data modeling wrapped inside an advanced premium dark aesthetic framework.
-            </p>
-        </section>
-
-        <section class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-num">5+</div>
-                <div class="metric-label">Premium Cars</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-num">100%</div>
-                <div class="metric-label">Valid CSS Grid</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-num">ITEC50</div>
-                <div class="metric-label">Course Project</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-num">CvSU</div>
-                <div class="metric-label">Main Campus</div>
-            </div>
-        </section>
-
-        <section class="team-section">
-            <h3 class="section-title">The Creative Team</h3>
-            <p class="section-desc">First-year Bachelor of Science in Information Technology students at Cavite State University.</p>
+        <div class="contact-grid">
             
-            <div class="team-grid">
+            <section class="form-panel">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Transmission Successful. Voiture Concierge will respond shortly.');">
+                    
+                    <div class="input-group">
+                        <label class="input-label">Full Name</label>
+                        <input type="text" class="form-field" placeholder="e.g. Juan Dela Cruz" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Email Address</label>
+                        <input type="email" class="form-field" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Subject / Fleet Inquiry</label>
+                        <input type="text" class="form-field" placeholder="e.g. Toyota GR Supra Allocation Details" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label class="input-label">Message Requirements</label>
+                        <textarea class="form-field" placeholder="Describe your procurement or account requirements in detail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Transmit Message</button>
+                </form>
+            </section>
+
+            <div class="info-panel">
                 
-                <div class="team-card">
-                    <div class="member-avatar-box">MJ</div>
-                    <div class="member-details">
-                        <span class="member-role">Lead Front-End Architect</span>
-                        <h4 class="member-name">Mark Joshua Dela Merced</h4>
-                        <p class="member-bio">First-year BSIT student specializing in interactive modular web templates and UI mechanics.</p>
-                    </div>
+                <div class="info-card">
+                    <span class="card-tag">Showroom Location</span>
+                    <p class="card-value-large">
+                        Voiture Central Stage Complex,<br>
+                        Cavite State University - Main Campus,<br>
+                        Indang, Cavite, Philippines
+                    </p>
                 </div>
 
-                <div class="team-card">
-                    <div class="member-avatar-box">PR</div>
-                    <div class="member-details">
-                        <span class="member-role">Technical Data Specialist</span>
-                        <h4 class="member-name">Paul Mckeith Ramos</h4>
-                        <p class="member-bio">First-year BSIT student coordinating structural documentation blueprints and engine profiling datasets.</p>
-                    </div>
+                <div class="info-card">
+                    <span class="card-tag">Direct Comms</span>
+                    <p class="card-value-large">
+                        <a href="mailto:concierge@voiture.com">concierge@voiture.com</a><br>
+                        <a href="tel:+63461234567">+63 (46) 123 4567</a>
+                    </p>
                 </div>
 
-                <div class="team-card">
-                    <div class="member-avatar-box">GL</div>
-                    <div class="member-details">
-                        <span class="member-role">Systems Integration Engineer</span>
-                        <h4 class="member-name">Gabriel Angelo Landicho</h4>
-                        <p class="member-bio">First-year BSIT student managing resource structural directories and cross-page layout connectivity models.</p>
+                <div class="info-card">
+                    <span class="card-tag">Showroom Availability</span>
+                    <div class="hours-sheet">
+                        <div class="hours-row"><span class="day-label">Monday - Friday</span><span class="time-val">08:00 AM - 05:00 PM</span></div>
+                        <div class="hours-row"><span class="day-label">Saturday</span><span class="time-val">09:00 AM - 03:00 PM</span></div>
+                        <div class="hours-row"><span class="day-label">Sunday / Holidays</span><span class="time-val">Closed Stage</span></div>
                     </div>
                 </div>
 
             </div>
-        </section>
+
+        </div>
+
+        <footer class="map-placeholder-box">
+            <div class="map-icon">📍</div>
+            <div class="map-text-main">GPS System Coordinate Engine</div>
+            <p style="font-size: 12px; color: #333333; max-width: 320px;">14.1945° N, 120.8801° E — CvSU Department of Information Technology Showroom Deck</p>
+        </footer>
 
     </main>
 
